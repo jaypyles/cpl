@@ -79,8 +79,6 @@ fn parse_argument(argument: &str) -> Result<(&str, &str), &'static str> {
     return Ok((config_file, spec));
 }
 
-// cfrl.edgedb -> cfrl is the dir, edgedb is the config
-
 fn main() {
     // Declare pathing
     const TOML_EXT: &str = ".toml";
