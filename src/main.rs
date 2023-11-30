@@ -1,16 +1,11 @@
 use dirs::home_dir;
 use dotenv::dotenv;
+use jrutils::utils::type_of;
 use std::env;
 use std::fs;
 use std::path::Path;
 use std::process::Command;
 use toml::Value;
-
-use std::any::type_name;
-
-fn type_of<T>(_: T) -> &'static str {
-    type_name::<T>()
-}
 
 struct Application {
     name: String,
@@ -21,6 +16,8 @@ struct Application {
 fn read_config(config_path: &Path, table_name: &str) -> Vec<Application> {
     let toml_content = fs::read_to_string(config_path).expect("Failed to read file!");
     let parsed_toml: Value = toml::from_str(&toml_content).expect("Failed to parse toml!");
+
+    println!("Type Of Parsed Toml: {:?}", type_of(parsed_toml.clone()));
 
     let table = parsed_toml
         .get(table_name)

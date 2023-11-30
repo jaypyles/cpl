@@ -9,3 +9,5 @@ edition = "2021"
 dirs = "5.0.1"
 dotenv = "0.15.0"
 toml = "0.8.8"
+jrutils = {git = "https://github.com/jaypyles/jrutils"}
+

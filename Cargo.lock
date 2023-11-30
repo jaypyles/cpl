@@ -26,6 +26,7 @@ version = "0.1.0"
 dependencies = [
  "dirs",
  "dotenv",
+ "jrutils",
  "toml",
 ]
 
@@ -88,6 +89,11 @@ dependencies = [
  "equivalent",
  "hashbrown",
 ]
+
+[[package]]
+name = "jrutils"
+version = "0.1.0"
+source = "git+https://github.com/jaypyles/jrutils#0955997282da619a654f3db018278c63b1946baa"
 
 [[package]]
 name = "libc"
